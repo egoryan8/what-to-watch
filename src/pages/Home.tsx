@@ -3,21 +3,18 @@ import SmallFilmCard from "../components/SmallFilmCard";
 import AvatarImg from '../assets/img/avatar.jpg'
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import {FilmInterface} from "../interfaces/FilmInterface";
 
-interface HomeProps {
-  title: string,
-  filmImg: string,
-  genre: string,
-  year: string,
-  filmBg: string,
+interface HomeInterface {
+  film: FilmInterface,
 }
 
-const Home: React.FC<HomeProps> = ({title, filmImg, genre, year, filmBg}) => {
+const Home: React.FC<HomeInterface> = ({film}) => {
   return (
     <div>
       <section className="film-card">
         <div className="film-card__bg">
-          <img src={filmBg} alt={title}/>
+          <img src={film.filmBg} alt={film.title}/>
         </div>
 
         <Header AvatarImg={AvatarImg}/>
@@ -25,16 +22,15 @@ const Home: React.FC<HomeProps> = ({title, filmImg, genre, year, filmBg}) => {
         <div className="film-card__wrap">
           <div className="film-card__info">
             <div className="film-card__poster">
-              {/*@ts-ignore*/}
-              <img src={filmImg} alt={title + 'poster'} width="218"
+              <img src={film.filmImg} alt={film.title + 'poster'} width="218"
                    height="327"/>
             </div>
 
             <div className="film-card__desc">
-              <h2 className="film-card__title">{title}</h2>
+              <h2 className="film-card__title">{film.title}</h2>
               <p className="film-card__meta">
-                <span className="film-card__genre">{genre}</span>
-                <span className="film-card__year">{year}</span>
+                <span className="film-card__genre">{film.genre}</span>
+                <span className="film-card__year">{film.year}</span>
               </p>
 
               <div className="film-card__buttons">
