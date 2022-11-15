@@ -2,6 +2,7 @@ import React from 'react';
 import SmallFilmCard from "../components/SmallFilmCard";
 import AvatarImg from '../assets/img/avatar.jpg'
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 interface HomeProps {
   title: string,
@@ -20,6 +21,7 @@ const Home: React.FC<HomeProps> = ({title, filmImg, genre, year, filmBg}) => {
         </div>
 
         <Header AvatarImg={AvatarImg}/>
+
         <div className="film-card__wrap">
           <div className="film-card__info">
             <div className="film-card__poster">
@@ -123,20 +125,8 @@ const Home: React.FC<HomeProps> = ({title, filmImg, genre, year, filmBg}) => {
           </div>
         </section>
 
-        <footer className="page-footer">
-          <div className="logo">
-            <a className="logo__link logo__link--light">
-              <span className="logo__letter logo__letter--1">W</span>
-              <span className="logo__letter logo__letter--2">T</span>
-              <span className="logo__letter logo__letter--3">W</span>
-            </a>
-          </div>
+        <Footer/>
 
-          <div className="copyright">
-            <p>© 2022 What to Watch Ltd.</p>
-            <p>Project by Fogel Egor.</p>
-          </div>
-        </footer>
       </div>
     </div>
   );
