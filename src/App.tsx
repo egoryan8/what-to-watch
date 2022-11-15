@@ -1,24 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Home from "./pages/Home";
+import './main.css';
+import GrandBudapestHotelImg from './assets/img/the-grand-budapest-hotel-poster.jpg';
+import GrandBudapestBg from './assets/img/bg-the-grand-budapest-hotel.jpg';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Home title={'The Grand Budapest Hotel'} filmImg={GrandBudapestHotelImg} genre={'Drama'} year={'2014'} filmBg={GrandBudapestBg}/>
     </div>
   );
 }
