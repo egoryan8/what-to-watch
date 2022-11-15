@@ -8,6 +8,8 @@ import AddReview from "./pages/AddReview";
 import Player from "./pages/Player";
 import PlayerPoster from './assets/img/player-poster.jpg';
 import MyList from "./pages/MyList";
+import Footer from "./components/Footer";
+import Film from "./pages/Film";
 
 
 function App() {
@@ -24,7 +26,8 @@ function App() {
       {/*<SignIn/>*/}
       {/*<AddReview film={initialFilm}/>*/}
       {/*<Player playerPoster={PlayerPoster}/>*/}
-      <MyList/>
+      {/*<MyList/>*/}
+      <Film film={initialFilm}/>
     </div>
   );
 }
